@@ -1,0 +1,185 @@
+/* General styling for the elements in the div called "codeContainer" the styling of codeContainer comes from
+an AI tool called Locofy.ai, where you can transform your Figma design into code This entire file is dedicated to that*/
+:root {
+  /* fonts */
+  --font-inter: Inter;
+
+  /* font sizes */
+  --font-size-base: 16px;
+  --font-size-xl: 20px;
+  --font-size-3xl: 22px;
+  --font-size-sm: 14px;
+  --font-size-17xl: 36px;
+  --font-size-5xl: 24px;
+  --font-size-13xl: 32px;
+  --font-size-lg: 18px;
+  --font-size-7xl: 26px;
+  --font-size-xs: 12px;
+
+  /* Gaps */
+  --gap-10xl: 29px;
+  --gap-4xs: 9px;
+  --gap-314xl: 333px;
+  --gap-3xl: 22px;
+  --gap-xl: 20px;
+  --gap-121xl: 140px;
+  --gap-sm: 14px;
+  --gap-xs: 12px;
+  --gap-smi: 13px;
+  --gap-12xs: 1px;
+  --gap-8xs: 5px;
+}
+
+/* Start of element styling inside "codeContainer" */
+.frame-parent7,
+.icon-wrapper1 {
+  display: flex;
+  justify-content: flex-start;
+}
+.icon-wrapper1 {
+  flex-direction: column;
+  padding: var(--padding-3xs);
+  align-items: flex-start;
+  transform: rotate(-180deg);
+  transform-origin: 0 0;
+}
+.frame-parent7 {
+  position: absolute;
+  top: 256px;
+  left: 352px;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  font-size: var(--font-size-lg);
+  color: var(--color-black);
+}
+.requirements {
+  position: relative;
+  font-size: var(--font-size-lg);
+  letter-spacing: 0.05em;
+}
+.vector-icon2 {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 28px;
+  height: 17px;
+}
+.span {
+  font-weight: 500;
+}
+.ordinary-539,
+.primary-499 {
+  position: absolute;
+  top: 0;
+  left: 41px;
+}
+.ordinary-539 {
+  top: 27px;
+}
+.vector-group,
+.vector-icon3 {
+  position: relative;
+  width: 160px;
+  height: 46px;
+  flex-shrink: 0;
+}
+.vector-icon3 {
+  width: 19.14px;
+  height: 19.14px;
+}
+.admission-requirement-gens-container {
+  position: relative;
+  letter-spacing: 0.05em;
+}
+.vector-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-3xl);
+}
+.vector-icon4 {
+  position: relative;
+  width: 20px;
+  height: 14px;
+  flex-shrink: 0;
+}
+.requirements-parent,
+.vector-parent1 {
+  display: flex;
+  justify-content: flex-start;
+}
+.vector-parent1 {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap-3xl);
+  color: var(--color-black);
+}
+.requirements-parent {
+  position: absolute;
+  top: 0;
+  left: 287px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 23px;
+}
+.about {
+  position: relative;
+  font-size: var(--font-size-lg);
+  letter-spacing: 0.05em;
+  color: var(--color-black);
+}
+.group-icon1 {
+  position: relative;
+  width: 22px;
+  height: 17px;
+  flex-shrink: 0;
+}
+.group-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+.vector-icon5 {
+  position: relative;
+  width: 20px;
+  height: 22px;
+  flex-shrink: 0;
+}
+.vector-parent2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-sm);
+}
+.medal-svgrepo-com-1-icon,
+.vector-icon6 {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.medal-svgrepo-com-1-icon {
+  overflow: hidden;
+}
+.about-parent,
+.medal-svgrepo-com-1-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-sm);
+}
+.about-parent {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-xl);
+}
+.aboutreq {
+  margin-top: 25px;
+  position: relative;
+}

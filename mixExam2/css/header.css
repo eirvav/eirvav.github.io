@@ -1,0 +1,70 @@
+/* Using bootstrap header */
+
+/*Header*/
+@media (max-width: 1270px) {
+  .nav-links li a {
+    display: none;
+  }
+}
+
+.uib-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "header-content";
+  grid-area: uib-header;
+  background-color: #cf3c3a;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.navbar {
+  padding: 0.5rem 0.1rem !important;
+}
+
+.header-content {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: ". header-links .";
+  grid-area: header-content;
+}
+
+.header-links {
+  grid-area: header-links;
+}
+
+.navbar {
+  background-color: #cf3c3a !important;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+li a {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+li a:hover {
+  font-weight: bolder;
+  color: #ffffff;
+}
+.nav-links li {
+  margin-right: 29px;
+}
+.program-analysis-tool {
+  text-decoration-line: underline;
+}

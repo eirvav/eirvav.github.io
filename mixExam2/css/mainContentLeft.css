@@ -1,0 +1,215 @@
+.horizontal-list ul {
+  margin: 0;
+  padding: 0;
+}
+
+.horizontal-list {
+  padding-top: 30px;
+}
+
+.horizontal-list ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.horizontal-list li {
+  margin-right: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+.course-info-header {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0.05em;
+  color: #121212;
+  margin-top: 25px;
+}
+
+.search-box {
+  margin-top: 25px;
+  background: #ffffff;
+  border: 1px solid #afafaf;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 10px 417px 10px 10px;
+  white-space: nowrap;
+}
+
+.search-text {
+  float: left;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  color: #505050;
+}
+
+.tag {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 10px;
+  background: #f3f3f3;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #121212;
+}
+
+#codeContainer {
+  margin-top: 25px;
+}
+
+#nothingHere {
+  margin-top: 25px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.studyHeader {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  text-decoration: underline 2px #cf3c3a;
+  margin-top: 25px;
+}
+
+.studyCounter {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.textInDropdown {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 25px;
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: 0.08em;
+  color: black;
+}
+
+/* For the data in questionnaire */
+.commentsDiv {
+  background-color: #cf3c3a;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140.02%;
+  letter-spacing: 0.05em;
+}
+
+.more-details {
+  margin-top: 25px;
+}
+
+.more-details .knapp {
+  display: block;
+  width: 100%;
+  height: 74px;
+  margin-top: 15px;
+  background-color: #f3f3f3;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown {
+  margin-top: 25px;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: none;
+}
+
+.dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  justify-content: flex-end;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.dropdown-toggle::after {
+  content: none;
+}
+
+.dropdown-toggle img {
+  transition: transform 0.3s ease;
+  margin-left: 0.8em;
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+.dropdown.open .dropdown-toggle img {
+  transform: rotate(180deg);
+}
+
+.showDetailsText {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  float: right;
+  letter-spacing: 0.05em;
+}
+
+#container {
+  height: 400px;
+  min-width: 310px;
+}
+
+.gif2 {
+  width: 50%;
+  height: 50%;
+}
+
+.compareText {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.knapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iconWrapper {
+  margin-right: 25px;
+}

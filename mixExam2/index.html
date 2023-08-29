@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/header.css" />
+    <link rel="stylesheet" type="text/css" href="./css/mainContentRight.css" />
+    <link rel="stylesheet" type="text/css" href="./css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="./css/aboutreq.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/mainContentLeft.css" />
+    <title>Task 5</title>
+    <!-- I used several different CSS files to structure my content, I felt having everything in one file made it less organized -->
+  </head>
+  <body>
+    <!-- CANDIDATE NUMBER 184 -->
+    <div class="mainContainer">
+      <div class="uib-header">
+        <div class="header-content">
+          <div class="header-links">
+            <!-- Bootstrap Header -->
+            <nav class="navbar navbar-light bg-light">
+              <a class="navbar-brand" href="#">
+                <img
+                  src="./public/uibLogo.svg"
+                  width="356"
+                  height="76"
+                  class="d-inline-block align-top"
+                  alt=""
+                />
+              </a>
+              <ul class="nav-links">
+                <li>
+                  <a href="#" class="program-analysis-tool"
+                    >Progam Analysis Tool</a
+                  >
+                </li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Research</a></li>
+                <li><img src="./public/person.svg" /></li>
+                <li><img src="./public/search.svg" /></li>
+                <li><img src="./public/burger.svg" /></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="mainContent">
+        <div class="coursesInfo">
+          <!-- coursesInfo is the content on the left side of the screen, and the css it belongs to is mainContentLeft.css -->
+          <div class="topLeftContentTags">
+            <div class="horizontal-list">
+              <ul>
+                <li>UiB</li>
+                <li><img src="./public/signRight.svg" class="icon" /></li>
+                <li>Program Analysis Tool</li>
+                <li><img src="./public/signRight.svg" class="icon" /></li>
+              </ul>
+            </div>
+
+            <h1 class="course-info-header">All studies</h1>
+            <div class="search-box">
+              <span class="search-text">Search for study or course</span>
+            </div>
+
+            <div id="tagContainer"></div>
+            <h3 id="nothingHere">
+              Weird... There seems to be nothing here, try applying some
+              filters!
+            </h3>
+          </div>
+
+          <div id="codeContainer" style="display: none">
+            <div class="courseIXD">
+              <h3 class="studyHeader">Media and Interaction Design</h3>
+              <div class="aboutreq">
+                <!-- Start of the aboutreq div created with Locofy.ai -->
+                <div class="requirements-parent">
+                  <div class="requirements">Requirements</div>
+                  <div class="vector-group">
+                    <img
+                      class="vector-icon2"
+                      alt=""
+                      src="./public/vector7.svg"
+                    />
+                    <div class="primary-499">
+                      <span>Primary: </span><span class="span">49.9</span>
+                    </div>
+                    <div class="ordinary-539">
+                      <span>Ordinary: </span><span class="span">53.9</span>
+                    </div>
+                  </div>
+                  <div class="vector-container">
+                    <img
+                      class="vector-icon3"
+                      alt=""
+                      src="./public/vector8.svg"
+                    />
+                    <div class="admission-requirement-gens-container">
+                      <span>Admission requirement: </span
+                      ><span class="span">GENS</span>
+                    </div>
+                  </div>
+                  <div class="vector-parent1">
+                    <img
+                      class="vector-icon4"
+                      alt=""
+                      src="./public/vector2.svg"
+                    />
+                    <div class="admission-requirement-gens-container">
+                      <span>Available spots: </span
+                      ><span class="span" id="available-spots">35</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-parent">
+                  <div class="about">About</div>
+                  <div class="group-group">
+                    <img class="group-icon1" alt="" src="./public/group.svg" />
+                    <div class="admission-requirement-gens-container">
+                      Bachelor
+                    </div>
+                  </div>
+                  <div class="vector-parent2">
+                    <img
+                      class="vector-icon5"
+                      alt=""
+                      src="./public/vector4.svg"
+                    />
+                    <div class="admission-requirement-gens-container">
+                      3 years
+                    </div>
+                  </div>
+                  <div class="vector-parent2">
+                    <img
+                      class="vector-icon6"
+                      alt=""
+                      src="./public/vector5.svg"
+                    />
+                    <div class="admission-requirement-gens-container">
+                      Only in Norwegian
+                    </div>
+                  </div>
+                  <div class="medal-svgrepo-com-1-parent">
+                    <img
+                      class="vector-icon6"
+                      alt=""
+                      src="./public/vector6.svg"
+                    />
+                    <div class="admission-requirement-gens-container">
+                      Fall 2023
+                    </div>
+                  </div>
+                  <div class="medal-svgrepo-com-1-parent">
+                    <img
+                      class="medal-svgrepo-com-1-icon"
+                      alt=""
+                      src="./public/medalsvgrepocom-1.svg"
+                    />
+                    <div class="admission-requirement-gens-container">
+                      180 ECTS credits
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown">
+                  <div class="dropdown-toggle" onclick="toggleDropdown(0)">
+                    <span class="showDetailsText">Show more details</span>
+                    <img class="arrow-down" src="./public/icon6.svg" />
+                  </div>
+                  <!-- I used chatGPT to create the dropdown menu. I used the prompt;
+                  "Create a dropdown menu from the text "Show more details" that contains three elements that 
+                  spans the entire width of a div. Each of the three elements needs text on the left side
+                  and a button floated on the right side. Give each element of 
+                  the three elements a grey background and some margin between them" -->
+                  <div class="dropdown-menu">
+                    <div class="details-container IXD">
+                      <div class="more-details">
+                        <a class="statisticsInteractionDesignData">
+                          <div
+                            type="button"
+                            class="knapp"
+                            data-toggle="modal"
+                            data-target="#statistics-modal"
+                            onclick="loadCourseData('IXD')"
+                          >
+                          <!-- First example of using the loadCourseData function to display 
+                            which API out of the three it want to gather data from-->
+                            <!-- The  data-target="#statistics-modal" makes it so -->
+                            <span class="textInDropdown">Statistics</span>
+                            <span class="iconWrapper">
+                              <img src="./public/plus.svg" id="plusIcon" />
+                            </span>
+                          </div>
+                        </a>
+
+                        <a class="statisticsInteractionDesignData">
+                          <div
+                            type="button"
+                            class="knapp"
+                            data-toggle="modal"
+                            data-target="#answer-modal"
+                            onclick="loadCourseData('IXD')"
+                          >
+                            <p class="textInDropdown">Students answer!</p>
+                            <span class="iconWrapper">
+                              <img src="./public/plus.svg" id="plusIcon" />
+                            </span>
+                          </div>
+                        </a>
+                        <a class="statisticsInteractionDesignData">
+                          <div
+                            type="button"
+                            class="knapp"
+                            data-toggle="modal"
+                            data-target="#questionnaire-modal"
+                            onclick="loadCourseData('IXD')"
+                          >
+                            <p class="textInDropdown">Questionnaire</p>
+                            <span class="iconWrapper">
+                              <img src="./public/plus.svg" id="plusIcon" />
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="horizontal-line"></div>
+            </div>
+
+            <div class="courseLAW">
+              <h3 class="studyHeader">LAW/JUS</h3>
+              <!-- Locofy.ai creating the div "aboutreq"
+              The classnames are weird because that is the names of the groups/frames/icons in Figma -->
+              <div class="aboutreq">
+                <div class="requirements-parent">
+                  <div class="requirements">Requirements</div>
+                  <div class="vector-group">
+                    <img
+                      class="vector-icon2"
+                      alt=""
+                      src="./public/vector7.svg"
+                    />
+                    <div class="primary-499">
+                      <span>Primary: </span><span class="span">49.9</span>
+                    </div>
+                    <div class="ordinary-539">
+                      <span>Ordinary: </span><span class="span">53.9</span>
+                    </div>
+                  </div>
+                  <div class="vector-container">
+                    <img
+                      class="vector-icon3"
+                      alt=""
+                      src="./public/vector8.svg"
+                    />
+                    <div class="admission-requirement-gens-container">
+                      <span>Admission requirement: </span
+                      ><span class="span">GENS</span>
+                    </div>
+                  </div>
+                  <div class="vector-parent1">
+                    <img
+                      class="vector-icon4"
+                      alt=""
+                      src="./public/vector2.svg"
+                    />
+                    <div class="admission-requirement-gens-container">
+                      <span>Available spots: </span
+                      ><span class="span" id="available-spots">35</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-parent">
+                  <div class="about">About</div>
+                  <div class="group-group">
+                    <img class="group-icon1" alt="" src="./public/group.svg" />
+                    <div class="admission-requirement-gens-container">
+                      Bachelor
+                    </div>
+                  </div>
+                  <div class="vector-parent2">
+                    <img
+                      class="vector-icon5"
+                      alt=""
+                      src="./public/vector4.svg"
+                    />
+                    <div class="admission-requirement-gens-container">
+                      3 years
+                    </div>
+                  </div>
+                  <div class="vector-parent2">
+                    <img
+                      class="vector-icon6"
+                      alt=""
+                      src="./public/vector5.svg"
+                    />
+                    <div class="admission-requirement-gens-container">
+                      Only in Norwegian
+                    </div>
+                  </div>
+                  <div class="medal-svgrepo-com-1-parent">
+                    <img
+                      class="vector-icon6"
+                      alt=""
+                      src="./public/vector6.svg"
+                    />
+                    <div class="admission-requirement-gens-container">
+                      Fall 2023
+                    </div>
+                  </div>
+                  <div class="medal-svgrepo-com-1-parent">
+                    <img
+                      class="medal-svgrepo-com-1-icon"
+                      alt=""
+                      src="./public/medalsvgrepocom-1.svg"
+                    />
+                    <div class="admission-requirement-gens-container">
+                      180 ECTS credits
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown">
+                  <div class="dropdown-toggle" onclick="toggleDropdown(1)">
+                    <span class="showDetailsText">Show more details</span>
+                    <img class="arrow-down" src="./public/icon6.svg" />
+                  </div>
+                  <div class="dropdown-menu">
+                    <div class="details-container LAW">
+                      <div class="more-details">
+                        <a class="statisticsLAWData">
+                          <div
+                            type="button"
+                            class="knapp"
+                            data-toggle="modal"
+                            data-target="#statistics-modal"
+                            onclick="loadCourseData('LAW')"
+                          >
+                            <p class="textInDropdown">Statistics</p>
+                            <span class="iconWrapper">
+                              <img src="./public/plus.svg" id="plusIcon" />
+                            </span>
+                          </div>
+                        </a>
+                        <a class="studentsAnswerLAWData">
+                          <div
+                            type="button"
+                            class="knapp"
+                            data-toggle="modal"
+                            data-target="#answer-modal"
+                            onclick="loadCourseData('LAW')"
+                          >
+                            <p class="textInDropdown">Students answer!</p>
+                            <span class="iconWrapper">
+                              <img src="./public/plus.svg" id="plusIcon" />
+                            </span>
+                          </div>
+                        </a>
+                        <a class="questionnaireLAWData">
+                          <div
+                            type="button"
+                            class="knapp"
+                            data-toggle="modal"
+                            data-target="#questionnaire-modal"
+                            onclick="loadCourseData('LAW')"
+                          >
+                            <p class="textInDropdown">Questionnaire</p>
+                            <span class="iconWrapper">
+                              <img src="./public/plus.svg" id="plusIcon" />
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="content-below"></div>
+              <div class="horizontal-line"></div>
+            </div>
+
+            <div class="courseCS101">
+              <h3 class="studyHeader">Computer Science 101</h3>
+              <div class="aboutreq">
+                <div class="requirements-parent">
+                  <div class="requirements">Requirements</div>
+                  <div class="vector-group">
+                    <img
+                      class="vector-icon2"
+                      alt=""
+                      src="./public/vector7.svg"
+                    />
+                    <div class="primary-499">
+                      <span>Primary: </span><span class="span">49.9</span>
+                    </div>
+                    <div class="ordinary-539">
+                      <span>Ordinary: </span><span class="span">53.9</span>
+                    </div>
+                  </div>
+                  <div class="vector-container">
+                    <img
+                      class="vector-icon3"
+                      alt=""
+                      src="./public/vector8.svg"
+                    />
+                    <div class="admission-requirement-gens-container">
+                      <span>Admission requirement: </span
+                      ><span class="span">GENS</span>
+                    </div>
+                  </div>
+                  <div class="vector-parent1">
+                    <img
+                      class="vector-icon4"
+                      alt=""
+                      src="./public/vector2.svg"
+                    />
+                    <div class="admission-requirement-gens-container">
+                      <span>Available spots: </span
+                      ><span class="span" id="available-spots">35</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-parent">
+                  <div class="about">About</div>
+                  <div class="group-group">
+                    <img class="group-icon1" alt="" src="./public/group.svg" />
+                    <div class="admission-requirement-gens-container">
+                      Bachelor
+                    </div>
+                  </div>
+                  <div class="vector-parent2">
+                    <img
+                      class="vector-icon5"
+                      alt=""
+                      src="./public/vector4.svg"
+                    />
+                    <div class="admission-requirement-gens-container">
+                      3 years
+                    </div>
+                  </div>
+                  <div class="vector-parent2">
+                    <img
+                      class="vector-icon6"
+                      alt=""
+                      src="./public/vector5.svg"
+                    />
+                    <div class="admission-requirement-gens-container">
+                      Only in Norwegian
+                    </div>
+                  </div>
+                  <div class="medal-svgrepo-com-1-parent">
+                    <img
+                      class="vector-icon6"
+                      alt=""
+                      src="./public/vector6.svg"
+                    />
+                    <div class="admission-requirement-gens-container">
+                      Fall 2023
+                    </div>
+                  </div>
+                  <div class="medal-svgrepo-com-1-parent">
+                    <img
+                      class="medal-svgrepo-com-1-icon"
+                      alt=""
+                      src="./public/medalsvgrepocom-1.svg"
+                    />
+                    <div class="admission-requirement-gens-container">
+                      180 ECTS credits
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown">
+                  <div class="dropdown-toggle" onclick="toggleDropdown(2)">
+                    <span class="showDetailsText">Show more details</span>
+                    <img class="arrow-down" src="./public/icon6.svg" />
+                  </div>
+                  <div class="dropdown-menu">
+                    <div class="details-container CS101">
+                      <div class="more-details">
+                        <div
+                          type="button"
+                          class="knapp"
+                          data-toggle="modal"
+                          data-target="#statistics-modal"
+                          onclick="loadCourseData('CS101')"
+                        >
+                          <p class="textInDropdown">Statistics</p>
+                          <span class="iconWrapper">
+                            <img src="./public/plus.svg" id="plusIcon" />
+                          </span>
+                        </div>
+                        <div
+                          type="button"
+                          class="knapp"
+                          data-toggle="modal"
+                          data-target="#answer-modal"
+                          onclick="loadCourseData('CS101')"
+                        >
+                          <p class="textInDropdown">Students answer!</p>
+                          <span class="iconWrapper">
+                            <img src="./public/plus.svg" id="plusIcon" />
+                          </span>
+                        </div>
+                        <div
+                          type="button"
+                          class="knapp"
+                          data-toggle="modal"
+                          data-target="#questionnaire-modal"
+                          onclick="loadCourseData('CS101')"
+                        >
+                          <p class="textInDropdown">Questionnaire</p>
+                          <span class="iconWrapper">
+                            <img src="./public/plus.svg" id="plusIcon" />
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- The "filter" on the right side the mainContentRight.css belongs to this-->
+        <div class="filterOptions">
+          <div class="filterContent">
+            <h2 class="filterHeader">Level</h2>
+            <div class="horizontal-line"></div>
+
+            <div class="filter-group">
+              <input type="checkbox" class="filter-button" value="Bachelor" />
+              <span class="filter-text">Bachelor</span>
+            </div>
+            <div class="filter-group">
+              <input type="checkbox" class="filter-button" value="Master" />
+              <span class="filter-text">Master</span>
+            </div>
+            <div class="filter-group">
+              <input type="checkbox" class="filter-button" value="PhD" />
+              <span class="filter-text">PhD</span>
+            </div>
+            <div class="filter-group">
+              <input
+                type="checkbox"
+                class="filter-button"
+                value="Single subjects"
+              />
+              <span class="filter-text">Single subjects</span>
+            </div>
+            <div class="filter-group">
+              <input
+                type="checkbox"
+                class="filter-button"
+                value="One year study"
+              />
+              <span class="filter-text">One year study</span>
+            </div>
+
+            <div style="margin: 0 25px; border-top: 1px solid #cfcfcf"></div>
+
+            <h2 class="filterHeader">Subject area</h2>
+
+            <div class="horizontal-line"></div>
+
+            <div class="filter-group">
+              <input
+                type="checkbox"
+                class="filter-button"
+                value="Language and literature"
+              />
+              <span class="filter-text">Language and <br />literature</span>
+            </div>
+            <div class="filter-group">
+              <input
+                type="checkbox"
+                class="filter-button"
+                value="Fine art and design"
+              />
+              <span class="filter-text"
+                >Fine art <br />
+                and design</span
+              >
+            </div>
+            <div class="filter-group">
+              <input
+                type="checkbox"
+                class="filter-button"
+                value="History and religion"
+              />
+              <span class="filter-text">History and religion</span>
+            </div>
+            <div class="filter-group">
+              <input
+                type="checkbox"
+                class="filter-button"
+                value="Society and politics"
+              />
+              <span class="filter-text">Society and politics</span>
+            </div>
+            <div class="filter-group">
+              <input
+                type="checkbox"
+                class="filter-button"
+                value="IT and media"
+              />
+              <span class="filter-text">IT and media</span>
+            </div>
+            <div class="filter-group">
+              <input
+                type="checkbox"
+                class="filter-button"
+                value="Natural Sciences"
+              />
+              <span class="filter-text">Natural Sciences</span>
+            </div>
+            <div class="filter-group">
+              <input
+                type="checkbox"
+                class="filter-button"
+                value="Tech and engineering"
+              />
+              <span class="filter-text"
+                >Tech and <br />
+                engineering</span
+              >
+            </div>
+            <div class="filter-group">
+              <input
+                type="checkbox"
+                class="filter-button"
+                value="Health and psychology"
+              />
+              <span class="filter-text"
+                >Health and <br />
+                psychology</span
+              >
+            </div>
+            <div class="filter-group">
+              <input
+                type="checkbox"
+                class="filter-button"
+                value="Sustainability"
+              />
+              <span class="filter-text">Sustainability</span>
+            </div>
+            <div class="filter-group">
+              <input
+                type="checkbox"
+                class="filter-button"
+                value="Law and administration"
+              />
+              <span class="filter-text">Law and <br />administration</span>
+            </div>
+
+            <div style="margin: 0 25px; border-top: 1px solid #cfcfcf"></div>
+
+            <h2 class="filterHeader">GPA requirements</h2>
+
+            <div class="horizontal-line"></div>
+
+            <div class="applyContainer">
+              <input
+                type="text"
+                id="inputField"
+                placeholder="e.g 3.5"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '')"
+              />
+              <!-- The above is to prevent the user typing anything else other than numbers -->
+
+              <button id="applyButton">Apply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-item">Contact UiB</div>
+        <span class="vertical-bar"></span>
+        <div class="footer-item">Available Positions</div>
+        <span class="vertical-bar"></span>
+        <div class="footer-item">Press</div>
+        <span class="vertical-bar"></span>
+        <div class="footer-item">About Cookies</div>
+        <span class="vertical-bar"></span>
+        <div class="footer-item">Accessibility</div>
+      </div>
+    </footer>
+    <!-- I have three Modals, on for each category; Statistics, Students Answer and Questionnaire. 
+    It "knows" what data to show in each modal based on the onlclick that gives loadCourseData() its courseName
+    The  modals must have a top level position/at the top of the DOM tree to show properly, which is why its placed at the bottom of the page-->
+    <!-- Bootstrap Modal (1) Statistics -->
+    <div
+      class="modal fade"
+      id="statistics-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="false"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Statistics</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="radio-filter">
+              <p style="font-size: 18px; font-weight: 500">View data as:</p>
+              <form>
+                <label>
+                  <input type="radio" name="radio" checked />
+                  <span class="show-as-text">Raw Data</span>
+                </label>
+                <label>
+                  <input type="radio" name="radio" value="Graphs" />
+                  <span class="show-as-text">Graphs</span>
+                </label>
+              </form>
+            </div>
+
+            <div class="graphs-content" style="display: none"> 
+              <h3 class="compareText">
+                Compare studies by toggling what study you want to view!
+              </h3>
+              <img src="./public/graphtutorial.gif" class="gif" />
+              <h3 class="compareText">
+                If you also want to compare the table data, click the hamburger
+                menu in the top right corner, and select "View Table Data"!
+              </h3>
+              <div class="applicantsGraphBlock">
+                <div class="horizontal-line"></div>
+                <h1 class="data-headers">Course Applicants</h1>
+                <div id="applicantsGraph"></div>
+              </div>
+
+              <div class="GPAGraphBlock">
+                <div class="horizontal-line"></div>
+                <h1 class="data-headers">Required GPA</h1>
+                <div id="GPAGraph"></div>
+              </div>
+
+              <div class="gradRateGraphBlock">
+                <div class="horizontal-line"></div>
+                <h1 class="data-headers">Graduation Rate</h1>
+                <div id="gradRateGraph"></div>
+              </div>
+
+              <div class="salaryGraphBlock">
+                <div class="horizontal-line"></div>
+                <h1 class="data-headers">Salary</h1>
+                <div id="salaryGraph"></div>
+              </div>
+
+              <div class="studyPlacesGraphBlock">
+                <div class="horizontal-line"></div>
+                <h1 class="data-headers">Study places</h1>
+                <div id="studyPlacesGraph"></div>
+              </div>
+            </div>
+
+            <div class="raw-data-content">
+              <div class="year-slider"></div>
+              <input
+                type="range"
+                min="2017"
+                max="2022"
+                value="2022"
+                id="yearRange"
+                class="slider"
+                step="1"
+                oninput="updateTables()"
+              />
+              <br />
+              <br /><span id="selectedYear"></span>
+
+              <div class="horizontal-line"></div>
+              <h1 class="data-headers">Course Applicants</h1>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Year</th>
+                    <th>Applicants</th>
+                  </tr>
+                </thead>
+                <tbody id="applicantsTableBody"></tbody>
+              </table>
+              <div class="horizontal-line"></div>
+              <h1 class="data-headers">Required GPA</h1>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Year</th>
+                    <th>GPA</th>
+                  </tr>
+                </thead>
+                <tbody id="gpaTableBody"></tbody>
+              </table>
+
+              <div class="horizontal-line"></div>
+              <h1 class="data-headers">Graduation Rate</h1>
+              <table id="graduationRateTable">
+                <thead>
+                  <tr>
+                    <th>Year</th>
+                    <th>Graduation Rate</th>
+                  </tr>
+                </thead>
+                <tbody id="graduationRateTableBody"></tbody>
+              </table>
+
+              <div class="horizontal-line"></div>
+              <h1 class="data-headers">Salary</h1>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Year</th>
+                    <th>Salary</th>
+                  </tr>
+                </thead>
+                <tbody id="salaryTableBody"></tbody>
+              </table>
+
+              <div class="horizontal-line"></div>
+              <h1 class="data-headers">Study Places</h1>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Year</th>
+                    <th>Study Places</th>
+                  </tr>
+                </thead>
+                <tbody id="studyPlacesTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Modal (2) Students Answer! -->
+    <div
+      class="modal fade"
+      id="answer-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="false"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Students Answer!</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="radio-filter">
+              <p style="font-size: 18px; font-weight: 500">View data as:</p>
+              <form>
+                <label>
+                  <input type="radio" name="radio2" value="Raw Data" checked />
+                  <span class="show-as-text">Raw Data</span>
+                </label>
+                <label>
+                  <input type="radio" name="radio2" value="Graphs" />
+                  <span class="show-as-text">Graphs</span>
+                </label>
+              </form>
+            </div>
+
+            <div class="radio-filter">
+              <p style="font-size: 18px; font-weight: 500">
+                Choose time period:
+              </p>
+              <form>
+                <label>
+                  <input
+                    type="radio"
+                    id="beginning"
+                    name="timeperiod"
+                    value="beginningOfStudies"
+                    checked
+                  />
+                  <span for="beginning">Beginning of studies</span>
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    id="end"
+                    name="timeperiod"
+                    value="endOfStudies"
+                  />
+                  <span for="end">End of studies</span>
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    id="after"
+                    name="timeperiod"
+                    value="1YearAfterGraduation"
+                  />
+                  <span for="after">One year after graduation</span>
+                </label>
+              </form>
+            </div>
+
+            <div class="raw-data-content2">
+              <input
+                type="range"
+                min="2017"
+                max="2022"
+                value="2022"
+                id="yearRangeNew"
+                class="slider"
+                step="1"
+                oninput="updateNewTables()"
+              />
+              <br /><span id="selectedYearNew"></span>
+              <div class="horizontal-line"></div>
+              <div class="valueData">
+                <h1 class="data-headers">Value of Learned Skills</h1>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Year</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody id="learnedSkillsTableBody"></tbody>
+                </table>
+              </div>
+
+              <div class="difficultyData">
+                <div class="horizontal-line"></div>
+                <h1 class="data-headers">Difficulty of Learned Skills</h1>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Year</th>
+                      <th>Difficulty</th>
+                    </tr>
+                  </thead>
+                  <tbody id="difficultyTableBody"></tbody>
+                </table>
+              </div>
+
+              <div class="expectationsData">
+                <div class="horizontal-line"></div>
+                <h1 class="data-headers">Satisfaction rate</h1>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Year</th>
+                      <th>Matching Expectations</th>
+                    </tr>
+                  </thead>
+                  <tbody id="satisfactionRateTableBody"></tbody>
+                </table>
+              </div>
+
+              <div class="careerData">
+                <div class="horizontal-line"></div>
+                <h1 class="data-headers">Chance of job?</h1>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Year</th>
+                      <th>Career Opportunities</th>
+                    </tr>
+                  </thead>
+                  <tbody id="chanceOfJobTableBody"></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="beginningGraph content">
+              <div class="graphs-content2" style="display: none">
+                <h3 class="compareText">
+                  Compare studies by toggling what study you want to view!
+                </h3>
+                <img src="./public/graphtutorial.gif" class="gif" />
+                <h3 class="compareText">
+                  If you also want to compare the table data, click the
+                  hamburger menu in the top right corner, and select "View Table
+                  Data"!
+                </h3>
+                <div class="horizontal-line"></div>
+                <h1 class="data-headers">Value of Learned Skills</h1>
+                <div class="valueGraphBlock">
+                  <div id="valueGraph"></div>
+                </div>
+
+                <div class="valueGraphBlock">
+                  <div class="horizontal-line"></div>
+                  <h1 class="data-headers">Difficulty of Learned Skills</h1>
+                  <div id="difficultyGraph"></div>
+                </div>
+
+                <div class="satisfactionGraphBlock">
+                  <div class="horizontal-line"></div>
+                  <h1 class="data-headers">Satisfaction Rate</h1>
+                  <div id="satisfactionGraph"></div>
+                </div>
+
+                <div class="careerGraphBlock">
+                  <div class="horizontal-line"></div>
+                  <h1 class="data-headers">Career Opportunities</h1>
+                  <div id="careerGraph"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="endGraph content">
+              <div class="graphs-content2" style="display: none">
+              <h3 class="compareText">
+                Compare studies by toggling what study you want to view!
+              </h3>
+              <img src="./public/graphtutorial.gif" class="gif" />
+              <h3 class="compareText">
+                If you also want to compare the table data, click the hamburger
+                menu in the top right corner, and select "View Table Data"!
+              </h3>
+              <div class="horizontal-line"></div>
+              <h1 class="data-headers">Value of Learned Skills</h1>
+              <div class="valueGraphBlock">
+                <div id="valueEndGraph"></div>
+              </div>
+
+              <h1 class="data-headers">Difficulty of Learned Skills</h1>
+              <div class="valueGraphBlock">
+                <div class="horizontal-line"></div>
+                <div id="difficultyEndGraph"></div>
+              </div>
+
+              <h1 class="data-headers">Satisfaction Rate</h1>
+              <div class="valueGraphBlock">
+                <div class="horizontal-line"></div>
+                <div id="satisfactionEndGraph"></div>
+              </div>
+
+              <h1 class="data-headers">Career Opportunities</h1>
+              <div class="valueGraphBlock">
+                <div class="horizontal-line"></div>
+                <div id="careerEndGraph"></div>
+              </div>
+              </div>
+            </div>
+
+            <div class="afterGraph content">
+              <div class="graphs-content2" style="display: none">
+              <h3 class="compareText">
+                Compare studies by toggling what study you want to view!
+              </h3>
+              <img src="./public/graphtutorial.gif" class="gif" />
+              <h3 class="compareText">
+                If you also want to compare the table data, click the hamburger
+                menu in the top right corner, and select "View Table Data"!
+              </h3>
+              <div class="horizontal-line"></div>
+              <h1 class="data-headers">Value of Learned Skills</h1>
+              <div class="valueGraphBlock">
+                <div id="valueAfterGraph"></div>
+              </div>
+
+              <div class="horizontal-line"></div>
+              <h1 class="data-headers">Difficulty of Learned Skills</h1>
+              <div class="valueGraphBlock">
+                <div id="difficultyAfterGraph"></div>
+              </div>
+
+              <div class="horizontal-line"></div>
+              <h1 class="data-headers">Satisfaction Rate</h1>
+              <div class="valueGraphBlock">
+                <div id="satisfactionAfterGraph"></div>
+              </div>
+
+              <div class="horizontal-line"></div>
+              <h1 class="data-headers">Career Opportunities</h1>
+              <div class="valueGraphBlock">
+                <div id="careerAfterGraph"></div>
+              </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Modal (3) Questionnaire -->
+    <div
+      class="modal fade"
+      id="questionnaire-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="false"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Anonymous Questionnaire!
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label>
+              <input
+                type="radio"
+                name="commentsTimeperiod"
+                value="beginningOfStudies"
+                checked
+              />
+              <span>Beginning of Studies</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="commentsTimeperiod"
+                value="endOfStudies"
+              />
+              <span>End of Studies</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="commentsTimeperiod"
+                value="1YearAfterGraduation"
+              />
+              <span>1 Year After Graduation</span>
+            </label>
+
+            <select
+              class="custom-select"
+              id="yearSelect"
+              style="width: fit-content"
+            >
+              <option>Select year of preference</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+            </select>
+            <div class="horizontal-line"></div>
+            <div id="commentsContainer"></div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./highcharts.js"></script>
+    <script src="./myscript.js"></script>
+  </body>
+</html>

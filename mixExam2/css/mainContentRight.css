@@ -1,0 +1,85 @@
+.filterHeader {
+  padding: 25px 0 0 25px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  color: #121212;
+}
+
+.horizontal-line {
+  margin-top: 25px;
+  border-top: 1px solid #cfcfcf;
+}
+
+.filter-group {
+  margin: 25px;
+}
+
+.filter-button {
+  width: 25px;
+  height: 25px;
+  background: #ffffff;
+  border: 1px solid #afafaf;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.filter-text {
+  margin-left: 13px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  color: #000000;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.filter-button:checked {
+  accent-color: #ffffff !important;
+  background-image: none !important;
+}
+
+.filter-button:hover {
+  cursor: pointer;
+}
+
+/* style for the div container */
+.applyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+}
+
+/* style for the input field */
+#inputField {
+  padding: 10px 38.5px;
+  gap: 10px;
+  width: 150px;
+  height: 35px;
+  background: #ffffff;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* style for the apply button */
+#applyButton {
+  background: #cf3c3a;
+  width: 150px;
+  height: 48px;
+  padding: 12px 30px;
+  gap: 10px;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+}
+
+::placeholder {
+  color: gray;
+  opacity: 0.5;
+}
